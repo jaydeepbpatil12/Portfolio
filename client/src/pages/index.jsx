@@ -70,7 +70,7 @@ export const Home = () => {
             {profile?.bio || 'Passionate about bridging the gap between elegant user interfaces and robust backend architectures.'}
           </motion.p>
           <motion.div variants={itemVariants} className="action-buttons">
-            <Link to="/projects" className="btn-primary">
+            <Link to="/#projects" className="btn-primary">
               View My Work
             </Link>
             <div className="social-links">
