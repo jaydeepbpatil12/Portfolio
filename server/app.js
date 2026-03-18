@@ -4,12 +4,12 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 
 // Routes
-import profileRoutes from '../routes/profile.js';
-import projectsRoutes from '../routes/projects.js';
-import certificationsRoutes from '../routes/certifications.js';
-import trainingRoutes from '../routes/training.js';
-import achievementsRoutes from '../routes/achievements.js';
-import imageRoutes from '../routes/image.js';
+import profileRoutes from './routes/profile.js';
+import projectsRoutes from './routes/projects.js';
+import certificationsRoutes from './routes/certifications.js';
+import trainingRoutes from './routes/training.js';
+import achievementsRoutes from './routes/achievements.js';
+import imageRoutes from './routes/image.js';
 
 dotenv.config();
 
@@ -48,11 +48,11 @@ export async function connectDB() {
 
 // ── Seed Data ──────────────────────────────────────────────────────────────────
 async function seedDatabase() {
-  const { default: Profile } = await import('../models/Profile.js');
-  const { default: Project } = await import('../models/Project.js');
-  const { default: Certification } = await import('../models/Certification.js');
-  const { default: Training } = await import('../models/Training.js');
-  const { default: Achievement } = await import('../models/Achievement.js');
+  const { default: Profile } = await import('./models/Profile.js');
+  const { default: Project } = await import('./models/Project.js');
+  const { default: Certification } = await import('./models/Certification.js');
+  const { default: Training } = await import('./models/Training.js');
+  const { default: Achievement } = await import('./models/Achievement.js');
 
   const existingProfile = await Profile.findOne();
   if (!existingProfile) {
