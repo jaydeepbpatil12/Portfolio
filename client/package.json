@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "axios": "^1.6.7",
-    "digiportfolio": "file:..",
     "framer-motion": "^12.35.1",
     "lucide-react": "^0.320.0",
     "ogl": "^1.0.11",
